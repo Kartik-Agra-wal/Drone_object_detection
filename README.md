@@ -21,7 +21,7 @@ There are three scripts for the control of the drone.
 _Obstacle avoidance_
 
 Used the sonar sensors of the hector drone to detect obstacles in its path , dividing the scan into three regions and moving around obstacles.
-## to simulate headwinds a constant force is alos applied on the drone.
+## to simulate headwinds a constant force is also applied on the drone.
 
 
 
