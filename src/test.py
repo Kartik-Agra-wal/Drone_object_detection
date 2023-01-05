@@ -156,49 +156,49 @@ def main():
                     force(body_name = "base_link",wrench = wrench, duration = rospy.Duration(600))
                     distanceC     = abs(math.sqrt(((goal_y-y_current) ** 2) + ((goal_x - x_current) ** 2)))
                     if(region_left_min!=6 and region_mid_min!=6 and region_right_min!=6):
-                        print("Case 111 : Take a U turn")
+
                         cmd.linear.x  = 0.0
                         cmd.angular.z = 0.4
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min!=6 and region_mid_min==6 and region_right_min!=6):
-                        print("Case 101 : Straight Movement")
+
                         cmd.linear.x  = 0.001
                         cmd.angular.z = 0.0
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min==6 and region_mid_min!=6 and region_right_min!=6):
-                        print("Case 011 : Take Left Turn")
+
                         cmd.linear.x  = 0.001
                         cmd.angular.z = 0.25
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min!=6 and region_mid_min!=6 and region_right_min==6):
-                        print("Case 110 : Take Right Turn")
+
                         cmd.linear.x  = 0.001
                         cmd.angular.z = -0.25
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min==6 and region_mid_min==6 and region_right_min!=6):
-                        print("Case 001 : Move Straight")
+
                         cmd.linear.x  = 0.001
                         cmd.angular.z = 0.0
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min!=6 and region_mid_min==6 and region_right_min==6):
-                        print("Case 100 : Move Straight")
+
                         cmd.linear.x  = 0.001
                         cmd.angular.z = 0.0
                         pub_cmd_vel.publish(cmd)
                         test_flag = True
                         continue
                     elif(region_left_min==6 and region_mid_min==6 and region_right_min==6 and test_flag):
-                        print("Case 000 : Do not Move")
+
                         cmd.linear.x  = 0.0
                         cmd.angular.z = 0.0
                         
