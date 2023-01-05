@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 
-####
-# 
-#  Written by Muhammad Luqman
-# 
-#  13/6/21
-#
-###
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
