@@ -20,27 +20,27 @@ class obstical_avoidence():
 
 
         if(region_left_min!=6 and region_mid_min!=6 and region_right_min!=6):
-              print("Case 111 : Take a U turn")
+
               self.robot_velocity.linear.x  = 0.0
               self.robot_velocity.angular.z = 0.8
               self.velocity_publisher.publish(self.robot_velocity)
         elif(region_left_min!=6 and region_mid_min==6 and region_right_min!=6):
-              print("Case 101 : Straight Movement")
+
               self.robot_velocity.linear.x  = 0.5
               self.robot_velocity.angular.z = 0.0
               self.velocity_publisher.publish(self.robot_velocity)
         elif(region_left_min==6 and region_mid_min!=6 and region_right_min!=6):
-              print("Case 011 : Take Left Turn")
+
               self.robot_velocity.linear.x  = 0.3
               self.robot_velocity.angular.z = 0.5
               self.velocity_publisher.publish(self.robot_velocity)
         elif(region_left_min!=6 and region_mid_min!=6 and region_right_min==6):
-              print("Case 110 : Take Right Turn")
+
               self.robot_velocity.linear.x  = 0.3
               self.robot_velocity.angular.z = -0.5
               self.velocity_publisher.publish(self.robot_velocity)
         elif(region_left_min==6 and region_mid_min==6 and region_right_min!=6):
-              print("Case 001 : Move Straight")
+
               self.robot_velocity.linear.x  = 0.5
               self.robot_velocity.angular.z = 0.0
               self.velocity_publisher.publish(self.robot_velocity)
@@ -49,11 +49,7 @@ class obstical_avoidence():
               self.robot_velocity.linear.x  = 0.5
               self.robot_velocity.angular.z = 0.0
               self.velocity_publisher.publish(self.robot_velocity)
-        elif(region_left_min==6 and region_mid_min==6 and region_right_min==6):
-              print("Case 000 : Do not Move")
-              self.robot_velocity.linear.x  = 0.0
-              self.robot_velocity.angular.z = 0.0
-              self.velocity_publisher.publish(self.robot_velocity)
+
               
         
 
